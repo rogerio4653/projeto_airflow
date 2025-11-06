@@ -3,13 +3,15 @@ name = "projeto-airflow"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "ROGERIO RODRIGUES",email = "rogerio-rodrigues@outlook.com"}
+    {name = "ROGERIO RODRIGUES", email = "rogerio-rodrigues@outlook.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<4.0"
 dependencies = [
+    "loguru (>=0.7.3,<0.8.0)",
+    "streamlit (>=1.51.0,<2.0.0)",
+    "pandas (>=2.3.3,<3.0.0)"
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
