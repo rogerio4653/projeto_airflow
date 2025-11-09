@@ -35,6 +35,7 @@ def pipeline():
     t4 = quarta_atividade()
 
     # Usa operadores para rodar as tasks
-    t1 >> t2 >> t3 >> t4
+    t1 >> [t2, t3] 
+    t3 << t4
 
 pipeline()  # ← CORRETO: Agora está fora da função, sem indentação
