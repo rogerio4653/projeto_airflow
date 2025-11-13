@@ -4,13 +4,13 @@ from airflow.models.baseoperator import chain
 from datetime import datetime
 
 @dag(
-    dag_id="minha_primeira_dag",
+    dag_id="minha_setima_dag",
     description="minha etl braba",
     schedule="* * * * *", 
     start_date=datetime(2025, 11, 8),
     catchup=False
 )
-def pipeline():
+def minha_setima_dag():
     @task 
     def primera_atividades():
         print("minha primeira atividade")
@@ -38,4 +38,4 @@ def pipeline():
     # Usa operadores para rodar as tasks
     chain(t1,t2,t3,t4)
 
-pipeline()  # ← CORRETO: Agora está fora da função, sem indentação
+minha_setima_dag()  # ← CORRETO: Agora está fora da função, sem indentação
